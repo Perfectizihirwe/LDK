@@ -1,0 +1,58 @@
+@import "../../styles/variables.scss";
+
+.dashboard__full {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+}
+
+.dashboard__full__left {
+  flex: 2.5;
+  padding: 2.5rem;
+  background-color: $background;
+}
+
+.dashboard__full__right {
+  flex: 1;
+  padding: 1rem;
+  background-color: $peach;
+}
+
+.dashboard__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.button {
+  background-color: $peach;
+  color: $black;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+
+.dashboard__analytics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard__chart {
+  height: 200px;
+}
+
+.dashboard__chart__title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: $black;
+}
