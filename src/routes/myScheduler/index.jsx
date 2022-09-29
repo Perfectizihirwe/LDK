@@ -9,15 +9,10 @@ export const MyScheduler = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleNewProduct = async (e) => {
     e.preventDefault();
-    const newProductObject = {
-      title: title,
-      description: description,
-      price: price,
-      image: image,
-    };
     let newProduct = new FormData();
     newProduct.set("title", title);
     newProduct.set("description", description);
@@ -28,6 +23,12 @@ export const MyScheduler = () => {
         console.log(value);
       }
     }, 2000);
+    setModalOpen(false);
+  };
+
+  const handleAddButton = (e) => {
+    e.preventDefault();
+    setModalOpen(true);
   };
 
   const Avatar = require("../../assets/images/avatar.jpg");
@@ -44,7 +45,12 @@ export const MyScheduler = () => {
             <span>New course</span>
           </button>
         </div>
-        <div className="modal">
+        <div>
+          <button className="submitButton" onClick={(e) => handleAddButton(e)}>
+            Add Product
+          </button>
+        </div>
+        <div className="modal" style={{ display: modalOpen ? "flex" : "none" }}>
           <span className="title">Add a new product</span>
           <form>
             <div className="inputItem">
