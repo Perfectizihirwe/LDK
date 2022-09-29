@@ -15,7 +15,7 @@
 .dashboard__full__right {
   flex: 1;
   padding: 1rem;
-  background-color: $peach;
+  background-color: $sidebar;
 }
 
 .dashboard__header {
@@ -48,6 +48,7 @@
 
 .dashboard__chart {
   height: 200px;
+  margin-bottom: 2rem;
 }
 
 .dashboard__chart__title {
@@ -55,4 +56,57 @@
   font-weight: bold;
   margin-bottom: 1rem;
   color: $black;
+}
+
+.dashboard__footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: $peach;
+}
+
+.dashboard__full__right__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.3rem;
+}
+
+.dashboard__full__right__top__left {
+  display: flex;
+  flex-direction: row;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.profile__details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.profile__details__name {
+  font-weight: bold;
+  color: $black;
+  font-size: 17px;
+}
+
+.profile__details__role {
+  color: $sidebar__gray;
+  font-size: 14px;
+}
+
+.button__messages {
+  border: none;
+  background-color: $sidebar;
+}
+
+.button__notifications {
+  background-color: $sidebar;
+  border: none;
 }

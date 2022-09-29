@@ -1,8 +1,11 @@
 import "./style.scss";
 import { TbVideoPlus } from "react-icons/tb";
+import { RiMessage3Line } from "react-icons/ri";
+import { MdOutlineNotifications } from "react-icons/md";
 import { DashboardAnalytic, BarChart } from "../../components";
 
 export const Dashboard = () => {
+  const Avatar = require("../../assets/images/avatar.jpg");
   const handleNewCourse = () => {
     alert("New course");
   };
@@ -45,9 +48,47 @@ export const Dashboard = () => {
           <span className="dashboard__chart__title">Revenue</span>
           <BarChart />
         </div>
+        <div className="dashboard__footer">
+          <div className="course__stats">
+            <span className="course__stats__title">Course stats</span>
+          </div>
+          <div className="sales_stats">
+            <span className="sales_stats__title">Sales stats</span>
+          </div>
+        </div>
       </div>
       <div className="dashboard__full__right">
-        <span>Right</span>
+        <div className="dashboard__full__right__top">
+          <div className="dashboard__full__right__top__left">
+            <div className="avatar__container">
+              <img
+                className="avatar"
+                width={40}
+                height={40}
+                src={Avatar}
+                alt="Profile"
+              />
+            </div>
+            <div className="profile__details">
+              <span className="profile__details__name">Samantha</span>
+              <span className="profile__details__role">English Teacher</span>
+            </div>
+          </div>  
+          <div className="profile__buttons">
+            <button
+              onClick={() => alert("Messages")}
+              className="button__messages"
+            >
+              <RiMessage3Line size={23} />
+            </button>
+            <button
+              onClick={() => alert("Notifications")}
+              className="button__notifications"
+            >
+              <MdOutlineNotifications size={23} />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
